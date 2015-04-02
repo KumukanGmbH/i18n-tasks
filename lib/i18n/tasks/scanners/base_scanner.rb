@@ -126,7 +126,9 @@ module I18n::Tasks::Scanners
       key
     end
 
-    VALID_KEY_CHARS = /(?:[[:word:]]|[-.?!;À-ž])/
+    # disabled to find all keys
+    #VALID_KEY_CHARS = /(?:[[:word:]]|[-.?!;À-ž])/
+    VALID_KEY_CHARS = /(.+)/
     VALID_KEY_RE_STRICT = /^#{VALID_KEY_CHARS}+$/
     VALID_KEY_RE = /^(#{VALID_KEY_CHARS}|[:\#{@}\[\]])+$/
 
